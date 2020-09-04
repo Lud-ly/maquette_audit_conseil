@@ -44,7 +44,6 @@ header{
     line-height: 34px;
 }
 .language ul li{
-    flex-direction: row-reverse;
     list-style: none;
     display:inline-flex;
 }
@@ -210,7 +209,7 @@ div#slider figure img{
     }
     .logo_aside img{
         height:140px;
-        margin:450px 30% 10px 7%;
+        margin:450px 0% 24px 0%;
     }
 
 section{
@@ -251,19 +250,27 @@ footer{
     padding:17px;
    
 }
+.footer_text{
+ width:100%;
+}
      footer ul {
         display: flex;
         justify-content: space-around;
         font-size: 11px;
-        border:1px solid #6b848b;
-        background-color: #F1F1F1;
+        border:1px solid #97b0c4;
+        background-color:#e3e9e9;
         border-bottom: none;
-        border-radius: 50%;
+        box-shadow:0px 0px 5px #6b848b;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
         align-items: center;
         list-style: none;
-         width: 50%;
-         padding:0;
+        width: 50%;
+        padding:8px;
+        margin: 0 auto;
+        text-decoration: underline;
     }
+
 /*----------------MEDIA QUERIES----------------*/
 @media only screen and (max-width: 1024px) {
     
@@ -277,7 +284,7 @@ min-width: 150px;
      .logo img{
     align-items: center;
     float: none;
-    height:80px;
+    height:60px;
     margin-top:10px;
     }
      #feu1 {
@@ -299,14 +306,22 @@ min-width: 150px;
     .toggled #nav_links {
     display: flex;
     }
-    
-section img{
-padding:6px;
-}
+ section img{
+        float:none;
+     padding:6px;
+    }
+    section p{
+      color:#6b848b;
+      line-height: 0px;
+      padding: 0px;
+    }       
      aside {
     padding:8px;
     float: none;
     word-wrap: break-word;
+    }
+    .logo_aside img{
+    height: 100px;
     }
     .parag {
     padding: 18px;
@@ -344,6 +359,9 @@ aside {
     font-size: 8px;
     float: none;
 }
+.logo_aside img{
+    height: 80px;
+    }
 .myText{
     padding:8px;
  }
