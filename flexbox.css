@@ -13,7 +13,7 @@ html, body {
     #site{
         display: inline-flexbox; 
         box-shadow: 2px #000;
-        width: calc(100% - 280px);
+        width: calc(100% - 250px);
         margin: 30px auto 0;
         background-color:#fff;
     }
@@ -278,7 +278,7 @@ footer{
             color:#97b0c4;
         }
 /*----------------MEDIA QUERIES----------------*/
-@media only screen and (max-width: 1524px) {
+/*@media only screen and (max-width: 1524px) {
     .logo img{
         align-items: center;
         float: none;
@@ -299,7 +299,7 @@ footer{
       footer{
           margin-top: 50px;
       }      
-}
+}*/
 @media only screen and (max-width: 1024px) {
     
 header{
