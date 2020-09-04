@@ -16,12 +16,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div id="maPage">
+    <div id="site">
         <header>
+            <!--Drapeau-->
             <div class="language">
                 <ul>
                     <li><img src="image_fichiers/flag_EN_off.png" class="flag_en"></li>
@@ -29,9 +30,11 @@
                     <span>langage</span>
                 </ul>
             </div>
+            <!--Logo-->
             <div class="logo">
                 <img src="image_fichiers/logo.jpg">
             </div>
+            <!--Bandeau caroussel-->
             <div class="bandeau" id="slider">
                 <figure>
                     <img src="image_fichiers/BandeauB0.jpg">
@@ -45,21 +48,23 @@
                 </figure>
             </div>
         </header>
+        <!--Nav bar-->
         <nav id="nav">
             <div id="feux">
-                <img id="feu1"src="image_fichiers/feux2.png">
+                <img id="feu1" src="image_fichiers/feux2.png">
                 <img id="burger" src="image_fichiers/icone_burger.png">
             </div>
             <div id="nav_links">
                 <div><a>Accueil</a></div>
-                <div ><a class="active"> Présentation</a></div>
+                <div><a class="active"> Présentation</a></div>
                 <div><a>Contextes d'interventions</a></div>
-                <div><a >Audits & diagnostic strategiques</a></div>
-                <div><a >Accompagnement Operationnel</a></div>
+                <div><a>Audits & diagnostic strategiques</a></div>
+                <div><a>Accompagnement Operationnel</a></div>
                 <div><a>Direction financiere Externalisée</a></div>
-                <div><a >Contact & Equipe</a></div>
+                <div><a>Contact & Equipe</a></div>
             </div>
         </nav>
+        <!--Section & Aside-->
         <div id="conteneur">
             <aside style="background:url(image_fichiers/fond_smenu.png)no-repeat">
                 <div class="aside_nav">
@@ -73,51 +78,55 @@
                 </div>
             </aside>
             <section>
-                <div class="myText">
-                    <p class="qui">QUI SOMMES NOUS ?</p>
-                    <hr size="1px" color="#6b848b"/>
+                <div class="hello">
+                    <p class="who">QUI SOMMES NOUS ?</p>
+                    <hr size="1px" color="#6b848b" />
                     <img src="image_fichiers/Imagequisommes2.jpg">
                     <div class="parag">
                         <p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
                             Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av.
-                            J.-C., le rendant vieux de 2000 ans.<br/> Un professeur du Hampden-Sydney College, en
+                            J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en
+                            Virginie,s'est intéressé à un des mots latins les plus obscurs, consectetur,<br /><br /> 
+                            Extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature
+                            classique Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
+                            <br /><br />Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av.
+                            J.-C., le rendant vieux de 2000 ans.. Un professeur du Hampden-Sydney College, en
                             Virginie,s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un
-                            passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature
-                            classique Contrairement à une opinion répandue,.<br/>  le Lorem Ipsum n'est pas simplement du texte aléatoire.
-                            Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av.
-                            J.-C., le rendant vieux de 2000 ans..<br/>  Un professeur du Hampden-Sydney College, en
-                            Virginie,s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un
-                            passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature..<br/>  
-                            Un professeur du Hampden-Sydney College, en Virginie,s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un
-                            passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature</p>
+                            passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature..
+                            <br /><br />Un professeur du Hampden-Sydney College, en Virginie,s'est intéressé à un des mots latins
+                            les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les 
+                            usages de ce mot dans la littérature Il trouve ses racines dans une oeuvre de la littérature latine
+                            classique.</p>
                     </div>
                 </div>
             </section>
         </div>
         <footer>
             <div class="footer_text">
-            <ul>
-                <li>Mentions Legales</li>
-                <li>plan du Site</li>
-                <li>Contact</li>
-            </ul>
-        </div>
+                <ul>
+                    <li><a href="#top">Mentions Legales</a></li>
+                    <li><a href="#top">plan du Site</a></li>
+                    <li><a href="#top">Contact</a></li>
+                </ul>
+            </div>
         </footer>
     </div>
-     <script> 
-        $(document).ready(function() { 
-            $('a').click(function() { 
-                $('a').removeClass(".radius_effect active"); 
-                $(this).addClass(".radius_effect active"); 
-            }); 
+
+    <!--Jquery pour nav-->
+    <script>
+        $(function () {
+            $('a').click(function () {
+                $('a').removeClass(".radius_effect active");
+                $(this).addClass(".radius_effect active");
+            });
         });
-         $(function() {     
-        $('#burger').click(function() {
-        $("nav").toggleClass('toggled');
-           
-      });
-   });
-    </script> 
+        /*Jquery pour nav responsive*/
+        $(function () {
+            $('#burger').click(function () {
+                $("nav").fadeIn(2000).toggleClass('toggled');
+            });
+        });
+    </script>
 </body>
 
 </html>

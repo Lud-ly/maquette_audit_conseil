@@ -5,20 +5,25 @@
 html, body {
 	margin: auto;
 	font: 11px Calibri;
-    background-image: linear-gradient(rgb(107, 132, 139),#fff);
+    background-image: linear-gradient(rgb(107, 132, 139),#fff,#fff);
     color:#6b848b;
     font-size: 14px;
 }
-a{
-    text-decoration: none;
-}
-#maPage{
-    display: inline-flexbox; 
-    box-shadow: 2px #000;
-    width: calc(100% - 100px);
-    margin: 30px auto 0;
-    background-color:#fff;
-}
+
+    #site{
+        display: inline-flexbox; 
+        box-shadow: 2px #000;
+        width: calc(100% - 280px);
+        margin: 30px auto 0;
+        background-color:#fff;
+    }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+        }
+
 /*-----------------HEADER----*/
 header{
     width: 100%;
@@ -28,9 +33,12 @@ header{
 .logo img{
     vertical-align: middle;
     float: left;
-    height:180px;
+    height:250px;
     margin-top:25px;
 }
+.bandeau img{
+    padding: 30px;
+  }
 .language{
    clear: both;
    padding: 0 50px 0 0;
@@ -40,7 +48,6 @@ header{
     float:right;
     margin-right:5px;
     font-size: 14px;
-    text-transform: uppercase;
     line-height: 34px;
 }
 .language ul li{
@@ -60,28 +67,26 @@ header{
 .flag_fr:hover{
    border-bottom: 1px solid rgb(107, 132, 139);
 }
-/*-----------CAROUSSEL---------*/
-.bandeau img{
-  padding: 30px;
-}
+/*-----------CAROUSSEL header---------*/
+
 div#slider{
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
 }
-div#slider figure{
-    position: relative;
-    width: 800%;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    text-align: left;
-    animation: 20s slidy infinite;
-}
-div#slider figure img{
-    width: 12.5%;
-    height: auto;
-}
+    div#slider figure{
+        position: relative;
+        width: 800%;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        text-align: left;
+        animation: 15s slidy infinite;
+    }
+    div#slider figure img{
+        width: 12.5%;
+        height: auto;
+    }
 
 @keyframes slidy {
   0% { left: 0%; }
@@ -100,23 +105,22 @@ div#slider figure img{
     display: flex;
     margin-bottom: 0px;
     height: 50px;
-    line-height: 40px;
-    background-image: linear-gradient(#FFF,#6b848b);
+    color:#6b848b;
+    font-size: 11px;
+    line-height: 42px;
+    background-image: linear-gradient(#FFF,#FFF,#6b848b);
 }
     #nav div a{
-    height:100%;
-    font-weight: 600;
-    font-size: 13px;
     text-decoration: none;
-    box-sizing: border-box;
-    padding: 5px 4px 4px 5px;
+    padding: 10px;
     }
-#nav a{
-    color:#6b848b;
-    font-size: 14px;
-}
+    #nav div a:hover{
+        color:rgb(255, 174, 0);
+    }
+
+/*-----nav active----*/
 #nav .active {
-   height:100%;
+    height:100%;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     color:#fff;
@@ -124,15 +128,17 @@ div#slider figure img{
     position: relative;
     bottom: -2px;
     text-align: center;
-    padding: 17px;
+    padding: 20px;
 }
-#nav .active a{
-  text-decoration: none;
-  color:#FFF;
-  padding: 25px;
-  line-height: 80px;
-}
-#nav_links {
+    #nav .active a{
+    text-decoration: none;
+    color:#FFF;
+    padding: 25px;
+    line-height: 100px;
+    }
+/*----nav collapse---*/
+
+#nav_links{
     display: flex;
     width: 100%;
     position: relative;
@@ -140,38 +146,35 @@ div#slider figure img{
     right:0px;
    
 }
-#nav_links div{
-    text-align: center; 
-    border-left: 1px solid rgb(107, 132, 139);
-    background-image: linear-gradient(#FFF,#6b848b);
-}
-#nav_links div .active{
-  background-color: #6b848b;
-  height:50px;
-}
-#feux{
-    flex: 0 0 15%;
-    line-height: 70px;
-    align-self: center;
-    margin-left: 50px;
-}
-#feux1{
-  padding:25px 70px;
-}
-#burger {
+    #nav_links div{
+        text-align: center; 
+        border-left: 1px solid hsl(193, 13%, 48%);
+        background-image: linear-gradient(#FFF,#FFF,#6b848b);
+    }
+    #nav_links div .active{
+    background-color: #6b848b;
+    height:50px;
+    }
+#burger{
     display: none;
 }
-.radius_effect{
-    height:50px;
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
-    color:#fff;
-    background-color: #6b848b;
-    height: calc(100% + 30px);
-    position: relative;
-    bottom: 35px;
-    text-align: center;
- }
+/*-----------image nav-----*/
+#feux{
+    flex: 0 0 15%;
+    margin-left: 55px;
+}
+
+    .radius_effect{
+        height:50px;
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+        color:#fff;
+        background-color: #6b848b;
+        height: calc(100% + 30px);
+        position: relative;
+        bottom: 35px;
+        text-align: center;
+    }
 
 /*-----------------SECTION----*/
 #conteneur{
@@ -182,7 +185,7 @@ div#slider figure img{
 }
     aside{
         min-width: 150px;
-        width: 15%;
+        width: 17%;
         min-height: 750px;
         color:#6b848b;
         box-shadow: 5px 5px 5px #6b848b;
@@ -191,67 +194,65 @@ div#slider figure img{
         line-height: 2px;
         padding: 5px;
     }
-    aside div{
-        word-wrap: break-word;
-        height: 30px;
-        border-bottom:1px solid #6b848b;
-        margin-top: 30px;
-        text-align: right;
-    }
-    .aside_nav{
-        border-top:1px solid  linear-gradient(rgb(107, 132, 139),#fff);;
-    }
-    .aside_nav .active{
-     background-color:#FAFAFA;
-    }
-    .aside_nav div .active{
-        height: 30px;
-    }
-    .logo_aside img{
-        height:140px;
-        margin:450px 0% 24px 0%;
-    }
+        aside div{
+            word-wrap: break-word;
+            height: 30px;
+            cursor: pointer;
+            border-bottom:1px solid #6b848b;
+            margin-top: 30px;
+            text-align: right;
+        }
+        .aside_nav{
+            border-top:1px solid  linear-gradient(rgb(107, 132, 139),#fff);;
+        }
+        .aside_nav .active{
+        background-color:#FAFAFA;
+        }
+        .aside_nav div .active{
+            height: 30px;
+        }
+        .logo_aside img{
+            height:140px;
+            margin:460px 15% 24px 0%;
+        }
 
-section{
-    min-height: 750px;
-    height: 500px;
-    width: 88%;
-}
-    .myText{
-        width:99%;
+    section{
         min-height: 750px;
-        float:right;
-        padding:55px;
-        background-color:#FFF;
-        font-size:14px;
-        box-shadow:5px 5px 5px #6b848b;
-        text-align:justify;
+        height: 500px;
+        width: 88%;
     }
-    section img{
-        float:right;
-        padding:73px;
-    }
-    section p{
-      color:#6b848b;
-      line-height: 30px;
-      padding: 0px;
-    }
-    .qui{
-     font-family: cursive;
-     font-weight: 500;
-    }
-    .parag{
-      padding: 20px;
-    }
+        section img{
+            float:right;
+            padding:73px;
+            cursor: pointer;
+        }
+        .hello{
+            width:99%;
+            min-height: 750px;
+            float:right;
+            padding:40px;
+            box-shadow:5px 5px 5px #6b848b;
+            text-align:justify;
+            color:#6b848b ;  
+        }
+        .who{
+          font-weight: 500;
+          font-size: large;
+         
+        }
+        .parag{
+            padding: 50px;
+          }
+         
+       
+        
+   
   /*----------------FOOTER----*/
 footer{
     width:100%;
     height: 50px;
     padding:17px;
    
-}
-.footer_text{
- width:100%;
 }
      footer ul {
         display: flex;
@@ -270,16 +271,54 @@ footer{
         margin: 0 auto;
         text-decoration: underline;
     }
-
+        footer ul li{
+            cursor: pointer;
+        }
+        footer ul li a{
+            color:#97b0c4;
+        }
 /*----------------MEDIA QUERIES----------------*/
+@media only screen and (max-width: 1524px) {
+    .logo img{
+        align-items: center;
+        float: none;
+        height:56px;
+        margin-left: 150px;
+        margin-top:4px;
+        }
+    .parag {
+        line-height: 20px;
+        font-size: 12px;
+         }
+         aside div{
+            font-size: 10px;
+         }
+         .logo_aside img{
+            height: 110px;
+            }
+      footer{
+          margin-top: 50px;
+      }      
+}
 @media only screen and (max-width: 1024px) {
     
 header{
 width: 100%;
 min-width: 150px;
 }
+    #nav{
+    line-height: 55px;
+    }
+    #nav_links {
+    display: none;
+    flex-direction: column;
+    height: 160px;
+    }
+    .toggled #nav_links {
+    display: flex;
+    }
     .bandeau img{
-         height:100px;
+         height:60px;
         }
      .logo img{
     align-items: center;
@@ -292,36 +331,24 @@ min-width: 150px;
     }    
     #burger {
     display: block;
-    width: 30px;
+    width: 45px;
     line-height: 70px;
     }
-    #nav{
-    line-height: 55px;
-    }
-    #nav_links {
-    display: none;
-    flex-direction: column;
-    height: 160px;
-    }
-    .toggled #nav_links {
-    display: flex;
-    }
- section img{
-        float:none;
+  
+section img{
+    float:none;
      padding:6px;
     }
-    section p{
-      color:#6b848b;
-      line-height: 0px;
-      padding: 0px;
-    }       
+       
      aside {
+    width: 100%;
     padding:8px;
     float: none;
     word-wrap: break-word;
+    font-size: 12px;
     }
     .logo_aside img{
-    height: 100px;
+    height: 110px;
     }
     .parag {
     padding: 18px;
@@ -345,7 +372,7 @@ nav{
  }
      .logo img{
         float: none;
-        height:80px;
+        height:60px;
         margin-top:0px;
      }
     #feu{
@@ -354,23 +381,36 @@ nav{
      .bandeau img{
          height:100px;;
      }
-aside {
+    aside {
+    width: 100%;
     padding:8px;
     font-size: 8px;
     float: none;
 }
-.logo_aside img{
-    height: 80px;
+    .logo_aside img{
+    height: 110px;
     }
-.myText{
-    padding:8px;
- }
- .parag {
-    padding: 18px;
-}
+    .parag {
+       line-height: 10px;
+       font-size: 10px;
+       padding: 0;
+       margin: 0;
+    
+    }
+    section img{
+        float:none;
+        height: 50px;
+        padding:0px;
+        }
+        .who{
+            font-size: 10px;
+           
+        }
     
    
 footer ul {
-margin: 26px 0px 0px 115px;
+margin: 0 auto;
+width: 100%;
+margin-top: 50px;
 }    
     }
